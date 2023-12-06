@@ -7,6 +7,29 @@ Property age As %Integer;
 
 Property adress As treinamento.adress;
 
+// Método de Classe
+
+ClassMethod FirstMethodClass(name As %String) As %Status
+{
+
+    write !, "Olá DEV" _name
+    Set sc = $$$OK
+    // do something
+    Return sc
+}
+
+/// Metodo de instancia
+Method InstanceMethod(name As %String, Output age As %Integer) As %Status
+{
+    Set name = ..name
+    Write !, "Dentro do método o valor é: " _name, !
+    Set age = ..age
+    Write !, "Dentro do método o valor é: " _age, !
+    Set sc = $$$OK
+    // do something
+    Return sc
+}
+
 Storage Default
 {
 <Data name="personDefaultData">
@@ -14,7 +37,7 @@ Storage Default
 <Value>%%CLASSNAME</Value>
 </Value>
 <Value name="2">
-<Value>name</Value>x
+<Value>name</Value>
 </Value>
 <Value name="3">
 <Value>age</Value>
