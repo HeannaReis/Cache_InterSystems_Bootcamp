@@ -1,4 +1,4 @@
-Class treinamento.adress Extends %SerialObject
+Class treinamento.adress Extends (%SerialObject, %Populate)
 {
 
 Property street As %String;
